@@ -153,32 +153,32 @@ const CategoryLearnStartPage = () => {
   }
 
   return (
-    <div className="min-h-screen p-4 sm:p-6 bg-dark-900 pb-24 md:pb-6">
+    <div className="min-h-screen p-3 sm:p-6 bg-dark-900 pb-24 md:pb-6">
       <div className="max-w-4xl mx-auto">
         {/* Header */}
-        <div className="flex items-center justify-between mb-8">
+        <div className="flex items-center justify-between mb-4 sm:mb-8">
           <button
             onClick={() => navigate(`/learn/category/${categoryId}`)}
-            className="flex items-center space-x-2 text-light-300 hover:text-white transition-colors font-kids"
+            className="flex items-center space-x-2 text-light-300 hover:text-white transition-colors font-kids text-sm sm:text-base"
           >
-            <ChevronLeft size={24} />
+            <ChevronLeft size={20} />
             <span>Back</span>
           </button>
           <div className="text-center">
             <div className="flex items-center space-x-2 justify-center mb-2">
-              <EmojiImage emoji={category.icon} size="32" />
-              <h1 className="text-3xl font-bold text-white font-kids">{category.name}</h1>
+              <EmojiImage emoji={category.icon} size={24} />
+              <h1 className="text-lg sm:text-3xl font-bold text-white font-kids">{category.name}</h1>
             </div>
-            <p className="text-light-300 font-kids">
+            <p className="text-[10px] sm:text-xs sm:text-base text-light-300 font-kids">
               {currentIndex + 1} / {availableWords.length}
             </p>
           </div>
-          <div className="w-20"></div>
+          <div className="w-12 sm:w-20"></div>
         </div>
 
         {/* Progress Bar */}
-        <div className="mb-8">
-          <div className="h-3 bg-dark-700 rounded-full overflow-hidden">
+        <div className="mb-4 sm:mb-8">
+          <div className="h-2 sm:h-3 bg-dark-700 rounded-full overflow-hidden">
             <div
               className="h-full bg-spotify-500 transition-all duration-500 rounded-full"
               style={{ width: `${((currentIndex + 1) / availableWords.length) * 100}%` }}
@@ -187,19 +187,19 @@ const CategoryLearnStartPage = () => {
         </div>
 
         {/* Word Card */}
-        <div className="mb-8 perspective-1000">
+        <div className="mb-4 sm:mb-6 perspective-1000">
           <div
             className={`card-flip ${isFlipped ? 'flipped' : ''}`}
             onClick={handleFlip}
           >
             {/* Front Side */}
-            <div className="card-face card-front bg-gradient-to-br from-spotify-700 to-spotify-900 rounded-2xl p-4 sm:p-8 cursor-pointer">
+            <div className="card-face card-front bg-gradient-to-br from-spotify-700 to-spotify-900 rounded-2xl p-3 sm:p-8 cursor-pointer">
               <div className="text-center">
-                <div className="mb-4 sm:mb-6 bg-white rounded-xl p-4 sm:p-6 inline-block">
-                  <EmojiImage emoji={currentWord.icon || '📷'} size="80 sm:[120px]" />
+                <div className="mb-2 sm:mb-6 bg-white rounded-xl p-2 sm:p-6 inline-block">
+                  <EmojiImage emoji={currentWord.icon || '📷'} size="40 sm:[120px]" />
                 </div>
 
-                <h2 className="text-4xl sm:text-6xl font-bold text-white mb-2 sm:mb-4 font-kids">
+                <h2 className="text-2xl sm:text-6xl font-bold text-white mb-1 sm:mb-4 font-kids">
                   {currentWord.word}
                 </h2>
 
@@ -208,44 +208,44 @@ const CategoryLearnStartPage = () => {
                     e.stopPropagation();
                     speakWord(currentWord.word);
                   }}
-                  className="bg-white bg-opacity-20 hover:bg-opacity-30 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full flex items-center space-x-2 mx-auto transition-all font-kids text-sm sm:text-base"
+                  className="bg-white bg-opacity-20 hover:bg-opacity-30 text-white px-2 sm:px-6 py-1 sm:py-3 rounded-full flex items-center space-x-1 sm:space-x-2 mx-auto transition-all font-kids text-xs sm:text-sm md:text-base"
                 >
-                  <Volume2 size={20} />
-                  <span>Listen</span>
+                  <Volume2 size={16} />
+                  <span className="hidden sm:inline">Listen</span>
                 </button>
 
-                <p className="text-spotify-200 mt-4 sm:mt-6 font-kids text-xs sm:text-base">Tap to see more</p>
+                <p className="text-spotify-200 mt-2 sm:mt-6 font-kids text-[10px] sm:text-xs sm:text-base">Tap to see more</p>
               </div>
             </div>
 
             {/* Back Side */}
-            <div className="card-face card-back bg-gradient-to-br from-orange-600 to-red-700 rounded-2xl p-4 sm:p-8 cursor-pointer">
+            <div className="card-face card-back bg-gradient-to-br from-orange-600 to-red-700 rounded-2xl p-3 sm:p-8 cursor-pointer">
               <div className="text-center">
-                <h2 className="text-3xl sm:text-5xl font-bold text-white mb-1 sm:mb-2 font-kids">
+                <h2 className="text-xl sm:text-5xl font-bold text-white mb-0.5 sm:mb-2 font-kids">
                   {currentWord.word}
                 </h2>
 
-                <p className="text-lg sm:text-2xl text-orange-100 mb-4 sm:mb-6 font-kids">
+                <p className="text-base sm:text-2xl text-orange-100 mb-2 sm:mb-6 font-kids">
                   {currentWord.phonetic}
                 </p>
 
-                <div className="bg-white bg-opacity-10 rounded-xl p-2 sm:p-4 mb-2 sm:mb-4">
-                  <p className="text-base sm:text-xl text-white font-kids">
+                <div className="bg-white bg-opacity-10 rounded-xl p-1.5 sm:p-4 mb-1.5 sm:mb-4">
+                  <p className="text-sm sm:text-xl text-white font-kids">
                     {currentWord.translation}
                   </p>
                 </div>
 
-                <div className="bg-white bg-opacity-10 rounded-xl p-2 sm:p-4 mb-2 sm:mb-4">
-                  <p className="text-sm sm:text-base text-white font-kids">
+                <div className="bg-white bg-opacity-10 rounded-xl p-1.5 sm:p-4 mb-1.5 sm:mb-4">
+                  <p className="text-xs sm:text-base text-white font-kids">
                     {currentWord.definition}
                   </p>
                 </div>
 
-                <div className="bg-white bg-opacity-10 rounded-xl p-2 sm:p-4 mb-2 sm:mb-4">
-                  <p className="text-sm sm:text-base text-white italic font-kids mb-1 sm:mb-2">
+                <div className="bg-white bg-opacity-10 rounded-xl p-1.5 sm:p-4 mb-1.5 sm:mb-4">
+                  <p className="text-xs sm:text-base text-white italic font-kids mb-0.5 sm:mb-2">
                     "{currentWord.example}"
                   </p>
-                  <p className="text-orange-100 text-xs sm:text-sm font-kids">
+                  <p className="text-orange-100 text-[10px] sm:text-sm font-kids">
                     {currentWord.exampleTranslation}
                   </p>
                 </div>
@@ -255,32 +255,32 @@ const CategoryLearnStartPage = () => {
                     e.stopPropagation();
                     speakWord(currentWord.example);
                   }}
-                  className="bg-white bg-opacity-20 hover:bg-opacity-30 text-white px-4 sm:px-6 py-1 sm:py-2 rounded-full flex items-center space-x-2 mx-auto transition-all font-kids mb-2 sm:mb-4 text-xs sm:text-base"
+                  className="bg-white bg-opacity-20 hover:bg-opacity-30 text-white px-2 sm:px-6 py-0.5 sm:py-2 rounded-full flex items-center space-x-1 sm:space-x-2 mx-auto transition-all font-kids mb-1.5 sm:mb-4 text-[10px] sm:text-xs sm:text-base"
                 >
-                  <Volume2 size={16} />
-                  <span>Listen</span>
+                  <Volume2 size={12} />
+                  <span className="hidden sm:inline">Listen</span>
                 </button>
 
-                <p className="text-orange-100 mt-1 sm:mt-2 font-kids text-xs sm:text-base">Tap to flip back</p>
+                <p className="text-orange-100 mt-0.5 sm:mt-2 font-kids text-[10px] sm:text-xs sm:text-base">Tap to flip back</p>
               </div>
             </div>
           </div>
         </div>
 
         {/* Action Buttons */}
-        <div className="flex items-center justify-center space-x-4 mb-8">
+        <div className="flex items-center justify-center space-x-2 sm:space-x-4 mb-2 sm:mb-4">
           <button
             onClick={handleSkip}
-            className="bg-dark-700 hover:bg-dark-600 text-white px-8 py-4 rounded-full flex items-center space-x-2 transition-all font-kids"
+            className="bg-dark-700 hover:bg-dark-600 text-white px-3 sm:px-8 py-2 sm:py-4 rounded-full flex items-center space-x-1 sm:space-x-2 transition-all font-kids text-xs sm:text-sm md:text-base"
           >
-            <X size={24} />
+            <X size={16} />
             <span>Skip</span>
           </button>
           <button
             onClick={handleMarkLearned}
-            className="bg-spotify-500 hover:bg-spotify-600 text-dark-900 px-8 py-4 rounded-full flex items-center space-x-2 transition-all font-bold font-kids"
+            className="bg-spotify-500 hover:bg-spotify-600 text-dark-900 px-3 sm:px-8 py-2 sm:py-4 rounded-full flex items-center space-x-1 sm:space-x-2 transition-all font-bold font-kids text-xs sm:text-sm md:text-base"
           >
-            <Check size={24} />
+            <Check size={16} />
             <span>Got It!</span>
           </button>
         </div>
@@ -290,18 +290,18 @@ const CategoryLearnStartPage = () => {
           <button
             onClick={handlePrevious}
             disabled={currentIndex === 0}
-            className={`flex items-center space-x-2 px-6 py-3 rounded-full transition-all font-kids ${
+            className={`flex items-center space-x-1 sm:space-x-2 px-2 sm:px-6 py-1.5 sm:py-3 rounded-full transition-all font-kids text-xs sm:text-sm ${
               currentIndex === 0
                 ? 'bg-dark-700 text-light-400 cursor-not-allowed'
                 : 'bg-dark-700 hover:bg-dark-600 text-white'
             }`}
           >
-            <ChevronLeft size={20} />
-            <span>Previous</span>
+            <ChevronLeft size={14} />
+            <span className="hidden sm:inline">Previous</span>
           </button>
 
           <div className="text-center">
-            <p className="text-light-300 font-kids">
+            <p className="text-[10px] sm:text-xs sm:text-sm text-light-300 font-kids">
               {learnedWords.length} words learned
             </p>
           </div>
@@ -309,14 +309,14 @@ const CategoryLearnStartPage = () => {
           <button
             onClick={handleNext}
             disabled={currentIndex === availableWords.length - 1}
-            className={`flex items-center space-x-2 px-6 py-3 rounded-full transition-all font-kids ${
+            className={`flex items-center space-x-1 sm:space-x-2 px-2 sm:px-6 py-1.5 sm:py-3 rounded-full transition-all font-kids text-xs sm:text-sm ${
               currentIndex === availableWords.length - 1
                 ? 'bg-dark-700 text-light-400 cursor-not-allowed'
                 : 'bg-dark-700 hover:bg-dark-600 text-white'
             }`}
           >
-            <span>Next</span>
-            <ChevronRight size={20} />
+            <span className="hidden sm:inline">Next</span>
+            <ChevronRight size={14} />
           </button>
         </div>
       </div>

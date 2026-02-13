@@ -23,10 +23,10 @@ const Layout = ({ children }) => {
     <div className="min-h-screen flex flex-col bg-dark-900">
       {/* Top Navigation */}
       <header className="bg-dark-800 sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <Link to="/" className="flex items-center space-x-3">
-            <EmojiImage emoji="📚" size="36" />
-            <h1 className="text-2xl font-bold text-white font-kids">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-2 sm:py-4 flex items-center justify-between">
+          <Link to="/" className="flex items-center space-x-2 sm:space-x-3">
+            <EmojiImage emoji="📚" size="24 sm:[36px]" />
+            <h1 className="text-lg sm:text-2xl font-bold text-white font-kids">
               Kids English
             </h1>
           </Link>
@@ -37,14 +37,14 @@ const Layout = ({ children }) => {
               <Link
                 key={item.path}
                 to={item.path}
-                className={`flex items-center space-x-2 px-4 py-2 rounded-full transition-all font-bold font-kids ${
+                className={`flex items-center space-x-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full transition-all font-bold font-kids text-xs sm:text-sm ${
                   isActive(item.path)
                     ? 'bg-dark-500 text-white'
                     : 'text-light-300 hover:text-white'
                 }`}
               >
-                <item.icon size={18} />
-                <span className="text-sm">{item.label}</span>
+                <item.icon size={14} />
+                <span>{item.label}</span>
               </Link>
             ))}
           </nav>
@@ -58,22 +58,22 @@ const Layout = ({ children }) => {
 
       {/* Mobile Navigation */}
       <nav className="md:hidden bg-dark-800 sticky bottom-0 z-50 border-t border-dark-700">
-        <div className="flex justify-around items-center py-2">
+        <div className="flex justify-around items-center py-1 sm:py-2">
           {navItems.map((item) => (
             <Link
               key={item.path}
               to={item.path}
-              className={`flex flex-col items-center space-y-1 px-4 py-2 rounded-lg transition-all ${
+              className={`flex flex-col items-center space-y-0.5 sm:space-y-1 px-2 sm:px-4 py-1 sm:py-2 rounded-lg transition-all ${
                 isActive(item.path)
                   ? 'text-spotify-500'
                   : 'text-light-400'
               }`}
             >
               <item.icon
-                size={24}
+                size={20}
                 className={isActive(item.path) ? 'animate-bounce-slow' : ''}
               />
-              <span className="text-xs font-bold font-kids">{item.label}</span>
+              <span className="text-[10px] sm:text-xs font-bold font-kids">{item.label}</span>
             </Link>
           ))}
         </div>
