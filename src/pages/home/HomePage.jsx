@@ -174,14 +174,6 @@ const HomePage = () => {
             </div>
           </div>
         </div>
-
-        {/* Playground Link */}
-        <div className="text-center">
-          <Link to="/playground" className="btn-primary inline-flex items-center space-x-2 text-lg font-kids">
-            <EmojiImage emoji="🎨" size="24" />
-            <span>Design Playground</span>
-          </Link>
-        </div>
       </div>
     </div>
   );
