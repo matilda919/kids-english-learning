@@ -126,6 +126,7 @@ const CategoryLearnStartPage = () => {
 
   // Auto-play pronunciation when card appears
   useEffect(() => {
+    window.scrollTo(0, 0);
     if (currentWord && !isFlipped) {
       const timer = setTimeout(() => {
         speakWord(currentWord.word);
@@ -152,7 +153,7 @@ const CategoryLearnStartPage = () => {
   }
 
   return (
-    <div className="min-h-screen p-6 bg-dark-900">
+    <div className="min-h-screen p-4 sm:p-6 bg-dark-900 pb-24 md:pb-6">
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <div className="flex items-center justify-between mb-8">
@@ -192,13 +193,13 @@ const CategoryLearnStartPage = () => {
             onClick={handleFlip}
           >
             {/* Front Side */}
-            <div className="card-face card-front bg-gradient-to-br from-spotify-700 to-spotify-900 rounded-2xl p-8 cursor-pointer">
+            <div className="card-face card-front bg-gradient-to-br from-spotify-700 to-spotify-900 rounded-2xl p-4 sm:p-8 cursor-pointer">
               <div className="text-center">
-                <div className="mb-6 bg-white rounded-xl p-6 inline-block">
-                  <EmojiImage emoji={currentWord.icon || '📷'} size="120" />
+                <div className="mb-4 sm:mb-6 bg-white rounded-xl p-4 sm:p-6 inline-block">
+                  <EmojiImage emoji={currentWord.icon || '📷'} size="80 sm:[120px]" />
                 </div>
 
-                <h2 className="text-6xl font-bold text-white mb-4 font-kids">
+                <h2 className="text-4xl sm:text-6xl font-bold text-white mb-2 sm:mb-4 font-kids">
                   {currentWord.word}
                 </h2>
 
@@ -207,44 +208,44 @@ const CategoryLearnStartPage = () => {
                     e.stopPropagation();
                     speakWord(currentWord.word);
                   }}
-                  className="bg-white bg-opacity-20 hover:bg-opacity-30 text-white px-6 py-3 rounded-full flex items-center space-x-2 mx-auto transition-all font-kids"
+                  className="bg-white bg-opacity-20 hover:bg-opacity-30 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full flex items-center space-x-2 mx-auto transition-all font-kids text-sm sm:text-base"
                 >
-                  <Volume2 size={24} />
+                  <Volume2 size={20} />
                   <span>Listen</span>
                 </button>
 
-                <p className="text-spotify-200 mt-6 font-kids">Tap to see more</p>
+                <p className="text-spotify-200 mt-4 sm:mt-6 font-kids text-xs sm:text-base">Tap to see more</p>
               </div>
             </div>
 
             {/* Back Side */}
-            <div className="card-face card-back bg-gradient-to-br from-orange-600 to-red-700 rounded-2xl p-8 cursor-pointer">
+            <div className="card-face card-back bg-gradient-to-br from-orange-600 to-red-700 rounded-2xl p-4 sm:p-8 cursor-pointer">
               <div className="text-center">
-                <h2 className="text-5xl font-bold text-white mb-2 font-kids">
+                <h2 className="text-3xl sm:text-5xl font-bold text-white mb-1 sm:mb-2 font-kids">
                   {currentWord.word}
                 </h2>
 
-                <p className="text-2xl text-orange-100 mb-6 font-kids">
+                <p className="text-lg sm:text-2xl text-orange-100 mb-4 sm:mb-6 font-kids">
                   {currentWord.phonetic}
                 </p>
 
-                <div className="bg-white bg-opacity-10 rounded-xl p-4 mb-4">
-                  <p className="text-xl text-white font-kids">
+                <div className="bg-white bg-opacity-10 rounded-xl p-2 sm:p-4 mb-2 sm:mb-4">
+                  <p className="text-base sm:text-xl text-white font-kids">
                     {currentWord.translation}
                   </p>
                 </div>
 
-                <div className="bg-white bg-opacity-10 rounded-xl p-4 mb-4">
-                  <p className="text-white font-kids">
+                <div className="bg-white bg-opacity-10 rounded-xl p-2 sm:p-4 mb-2 sm:mb-4">
+                  <p className="text-sm sm:text-base text-white font-kids">
                     {currentWord.definition}
                   </p>
                 </div>
 
-                <div className="bg-white bg-opacity-10 rounded-xl p-4 mb-4">
-                  <p className="text-white italic font-kids mb-2">
+                <div className="bg-white bg-opacity-10 rounded-xl p-2 sm:p-4 mb-2 sm:mb-4">
+                  <p className="text-sm sm:text-base text-white italic font-kids mb-1 sm:mb-2">
                     "{currentWord.example}"
                   </p>
-                  <p className="text-orange-100 text-sm font-kids">
+                  <p className="text-orange-100 text-xs sm:text-sm font-kids">
                     {currentWord.exampleTranslation}
                   </p>
                 </div>
@@ -254,13 +255,13 @@ const CategoryLearnStartPage = () => {
                     e.stopPropagation();
                     speakWord(currentWord.example);
                   }}
-                  className="bg-white bg-opacity-20 hover:bg-opacity-30 text-white px-6 py-2 rounded-full flex items-center space-x-2 mx-auto transition-all font-kids mb-4"
+                  className="bg-white bg-opacity-20 hover:bg-opacity-30 text-white px-4 sm:px-6 py-1 sm:py-2 rounded-full flex items-center space-x-2 mx-auto transition-all font-kids mb-2 sm:mb-4 text-xs sm:text-base"
                 >
-                  <Volume2 size={20} />
-                  <span>Listen to Example</span>
+                  <Volume2 size={16} />
+                  <span>Listen</span>
                 </button>
 
-                <p className="text-orange-100 mt-2 font-kids">Tap to flip back</p>
+                <p className="text-orange-100 mt-1 sm:mt-2 font-kids text-xs sm:text-base">Tap to flip back</p>
               </div>
             </div>
           </div>

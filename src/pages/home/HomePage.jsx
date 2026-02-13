@@ -36,36 +36,36 @@ const HomePage = () => {
             </p>
 
             {/* Family Illustrations */}
-            <div className="flex items-center gap-4 mt-6">
-              <div className="text-center group cursor-pointer bg-white bg-opacity-10 rounded-lg p-3 hover:bg-opacity-20 transition-all">
+            <div className="flex items-center justify-center gap-2 sm:gap-4 mt-6">
+              <div className="text-center group cursor-pointer bg-white bg-opacity-10 rounded-lg p-2 sm:p-3 hover:bg-opacity-20 transition-all flex-1">
                 <div className="mb-1 animate-wiggle">
-                  <EmojiImage emoji="👨" size="48" />
+                  <EmojiImage emoji="👨" size={32} />
                 </div>
-                <p className="text-xs text-spotify-200 font-kids">Dad</p>
+                <p className="text-[10px] sm:text-xs text-spotify-200 font-kids">Dad</p>
               </div>
-              <div className="text-center group cursor-pointer bg-white bg-opacity-10 rounded-lg p-3 hover:bg-opacity-20 transition-all">
+              <div className="text-center group cursor-pointer bg-white bg-opacity-10 rounded-lg p-2 sm:p-3 hover:bg-opacity-20 transition-all flex-1">
                 <div className="mb-1 animate-wiggle">
-                  <EmojiImage emoji="👩" size="48" />
+                  <EmojiImage emoji="👩" size={32} />
                 </div>
-                <p className="text-xs text-spotify-200 font-kids">Mom</p>
+                <p className="text-[10px] sm:text-xs text-spotify-200 font-kids">Mom</p>
               </div>
-              <div className="text-center group cursor-pointer bg-white bg-opacity-10 rounded-lg p-3 hover:bg-opacity-20 transition-all">
+              <div className="text-center group cursor-pointer bg-white bg-opacity-10 rounded-lg p-2 sm:p-3 hover:bg-opacity-20 transition-all flex-1">
                 <div className="mb-1 animate-wiggle">
-                  <EmojiImage emoji="🐕" size="48" />
+                  <EmojiImage emoji="🐕" size={32} />
                 </div>
-                <p className="text-xs text-spotify-200 font-kids">Corgi</p>
+                <p className="text-[10px] sm:text-xs text-spotify-200 font-kids">Corgi</p>
               </div>
-              <div className="text-center group cursor-pointer bg-white bg-opacity-10 rounded-lg p-3 hover:bg-opacity-20 transition-all">
+              <div className="text-center group cursor-pointer bg-white bg-opacity-10 rounded-lg p-2 sm:p-3 hover:bg-opacity-20 transition-all flex-1">
                 <div className="mb-1 animate-wiggle">
-                  <EmojiImage emoji="👴" size="48" />
+                  <EmojiImage emoji="👴" size={32} />
                 </div>
-                <p className="text-xs text-spotify-200 font-kids">Grandpa</p>
+                <p className="text-[10px] sm:text-xs text-spotify-200 font-kids">Grandpa</p>
               </div>
-              <div className="text-center group cursor-pointer bg-white bg-opacity-10 rounded-lg p-3 hover:bg-opacity-20 transition-all">
+              <div className="text-center group cursor-pointer bg-white bg-opacity-10 rounded-lg p-2 sm:p-3 hover:bg-opacity-20 transition-all flex-1">
                 <div className="mb-1 animate-wiggle">
-                  <EmojiImage emoji="👵" size="48" />
+                  <EmojiImage emoji="👵" size={32} />
                 </div>
-                <p className="text-xs text-spotify-200 font-kids">Grandma</p>
+                <p className="text-[10px] sm:text-xs text-spotify-200 font-kids">Grandma</p>
               </div>
             </div>
           </div>
