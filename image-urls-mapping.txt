@@ -1,0 +1,56 @@
+数字类：
+one: https://images.unsplash.com/photo-1591191485459-36b9ef850d2c?w=400&q=80
+two: https://images.unsplash.com/photo-1550684848-fac1c5b4e853?w=400&q=80
+three: https://images.unsplash.com/photo-1533614346686-a3bb02d66e8e?w=400&q=80
+four: https://images.unsplash.com/photo-1541522165085-c4dc0f3e7cbe?w=400&q=80
+five: https://images.unsplash.com/photo-1582562124811-c09040d0a901?w=400&q=80
+six: https://images.unsplash.com/photo-1554189097-ffe88e998a96?w=400&q=80
+seven: https://images.unsplash.com/photo-1575424909138-46b05e5919ec?w=400&q=80
+eight: https://images.unsplash.com/photo-1553181808-896b4f3ed8ea?w=400&q=80
+nine: https://images.unsplash.com/photo-1548337138-e87d889cc369?w=400&q=80
+ten: https://images.unsplash.com/photo-1509021436665-8f07dbf5bf1d?w=400&q=80
+
+动物类（补充）：
+chicken: https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?w=400&q=80
+rabbit: https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?w=400&q=80
+sheep: https://images.unsplash.com/photo-1583961717228-045546be8513?w=400&q=80
+horse: https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=400&q=80
+whale: https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=400&q=80
+dolphin: https://images.unsplash.com/photo-1607153333879-c174e265b1d5?w=400&q=80
+shark: https://images.unsplash.com/photo-1560275619-4662e36fa65c?w=400&q=80
+octopus: https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=400&q=80
+
+水果类（补充）：
+pear: https://images.unsplash.com/photo-1568969384119-081b35ad781f?w=400&q=80
+peach: https://images.unsplash.com/photo-1629828874514-44f0b9cddf9f?w=400&q=80
+cherry: https://images.unsplash.com/photo-1528821128474-27f963b062bf?w=400&q=80
+
+食物类（补充）：
+juice: https://images.unsplash.com/photo-1600271886742-f049cd451bba?w=400&q=80
+cheese: https://images.unsplash.com/photo-1452195100486-9cc805987862?w=400&q=80
+soup: https://images.unsplash.com/photo-1547592166-23ac45744acd?w=400&q=80
+noodles: https://images.unsplash.com/photo-1612927601601-6638404737ce?w=400&q=80
+chicken-meat: https://images.unsplash.com/photo-1598103442097-8b74394b95c6?w=400&q=80
+fish-meat: https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=400&q=80
+ice cream: https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=400&q=80
+candy: https://images.unsplash.com/photo-1582058091505-f87a2e55a40f?w=400&q=80
+
+蔬菜类（补充）：
+potato: https://images.unsplash.com/photo-1518977676601-b53f82aba655?w=400&q=80
+corn: https://images.unsplash.com/photo-1551754655-cd27e38d2076?w=400&q=80
+broccoli: https://images.unsplash.com/photo-1583663848850-46af132dc08e?w=400&q=80
+
+家居物品类：
+table: https://images.unsplash.com/photo-1595428774223-ef52624120d2?w=400&q=80
+chair: https://images.unsplash.com/photo-1503602642458-232111445657?w=400&q=80
+bed: https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=400&q=80
+door: https://images.unsplash.com/photo-1542629425-87172f57e537?w=400&q=80
+window: https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=400&q=80
+
+形容词：
+big: https://images.unsplash.com/photo-1564760055775-d63b17a55c44?w=400&q=80
+small: https://images.unsplash.com/photo-1425082661705-1834bfd09dca?w=400&q=80
+happy: https://images.unsplash.com/photo-1542596768-5d1d21f1cf98?w=400&q=80
+sad: https://images.unsplash.com/photo-1621252179027-94459d278660?w=400&q=80
+hot: https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?w=400&q=80
+cold: https://images.unsplash.com/photo-1517166357932-b3a5b29d2555?w=400&q=80
